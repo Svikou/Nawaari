@@ -14,7 +14,7 @@ const Main = () => {
     </div>
     <section className='flex justify-between items-center max-lg:flex-col gap-10 w-full max-container'>
     <div className='flex flex-1 flex-col'>
-      <div className="p-5">
+      <div className="p-10">
       <Input />
       </div>
       <div className="p-5">
