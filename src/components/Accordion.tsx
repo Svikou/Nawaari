@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-interface labelObject {
-  label: string;
+interface label {
+  label: HTMLElement;
 }
 
 const Accordion = () => {
@@ -12,9 +12,9 @@ const Accordion = () => {
   };
 
   return (
-    <div className="w-[450px] mx-auto bg-white h-12 rounded-lg bg-[#e7e6e64c] p-2">
+    <div className="w-[450px] mx-auto bg-white h-12 rounded-lg bg-[#e7e6e65a] p-3 items-center">
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAccordion}>
-        <h2 className="text-lg font-medium">Frais de fonctionnement</h2>
+        <h2 className="text-md font-semibold font-montserrat">Frais de fonctionnement</h2>
         <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Accordion = () => {
 
 const InputField = ({ label }) => {
   return (
-    <div className="flex items-center justify-between bg-gray-200 rounded-lg p-3">
+    <div className="flex items-center justify-between bg-[#e7e6e65a] rounded-lg p-4 mt-8">
       <label className="text-gray-700 font-medium">{label}</label>
       <div className="relative flex items-center">
         <input
