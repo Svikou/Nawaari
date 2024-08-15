@@ -12,7 +12,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="w-[450px] mx-auto bg-white h-12 rounded-lg bg-[#e7e6e65a] p-3 items-center">
+    <div className="w-[450px] mx-auto h-12 rounded-lg bg-[#e7e6e64d] p-3 items-center">
       <div className="flex justify-between items-center cursor-pointer" onClick={toggleAccordion}>
         <h2 className="text-md font-semibold font-montserrat">Frais de fonctionnement</h2>
         <span className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`}>

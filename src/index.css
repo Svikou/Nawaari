@@ -8,3 +8,89 @@
 .input {
   @apply outline-none;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+}
+
+.currency-converter {
+  @apply w-[480px] mx-auto p-10 pt-10 pb-12 rounded-lg backdrop-blur bg-[#e7e6e64d] border border-[rgba(255,255,255,0.3)] shadow-lg;
+}
+
+.currency-converter .converter-title {
+  @apply text-black text-2xl font-semibold text-center;
+}
+
+.currency-converter .converter-form {
+  @apply mt-11;
+}
+
+.converter-form .form-group {
+  @apply flex flex-col mb-7;
+}
+
+.converter-form .form-group .form-label {
+  @apply text-black font-medium mb-2.5 text-base;
+}
+
+.converter-form .form-group .form-input {
+  @apply outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-md bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.5)];
+}
+
+.converter-form .form-currency-group {
+  @apply flex flex-row items-center justify-between;
+}
+
+.form-currency-group .currency-select {
+  @apply flex px-2.5 min-h-[45px] items-center rounded-md bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.5)];
+}
+
+.form-currency-group .currency-select img {
+  @apply w-6;
+}
+
+.form-currency-group .currency-select .currency-dropdown {
+  @apply outline-none border-none bg-transparent text-black text-base font-medium pl-2.5;
+}
+
+.form-currency-group .currency-select .currency-dropdown option {
+  @apply text-black font-medium;
+}
+
+.form-currency-group .swap-icon {
+  @apply h-10 w-10 cursor-pointer flex mt-6 items-center justify-center rounded-full bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.5)] transition ease-in-out;
+}
+
+.form-currency-group .swap-icon:hover {
+  @apply bg-[rgba(255,255,255,0.3)];
+}
+
+.converter-form .submit-button {
+  @apply w-full min-h-[52px] rounded-md border-none outline-none text-base font-semibold cursor-pointer mt-1.5 transition ease-in-out;
+}
+
+.converter-form .submit-button.loading {
+  @apply opacity-70 pointer-events-none;
+}
+
+.converter-form .submit-button:hover {
+  @apply bg-[rgba(255,255,255,0.7)];
+}
+
+.converter-form .exchange-rate-result {
+  @apply text-white text-lg font-semibold text-center py-6 mt-6 rounded-md tracking-wider bg-[rgba(255,255,255,0.15)];
+}
