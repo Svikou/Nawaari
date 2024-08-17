@@ -20,7 +20,7 @@ const Main = () => {
       <Input />
       </div>
       <div className="p-5">
-      <Accordion/>
+      <Accordion />
       </div>
     </div>
     <div className='flex flex-1 flex-col'>
