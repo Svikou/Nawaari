@@ -27,9 +27,13 @@ const Main = () => {
       <div className="pb-10">
       <Render/>
       </div>
-    
+      
+      <div>
+        <p className="block text-lg font-montserrat font-semibold leading-6 text-gray-900 mb-2 text-center">
+      Convertisseur de devises
+      </p> 
+      </div>
     <div className="currency-converter">
-      <h2 className="converter-title">Currency Converter</h2>
       <ConverterForm />
     </div>
     </div>

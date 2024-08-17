@@ -13,8 +13,8 @@ const Input = () => {
         id="price"
         name="price"
         type="text"
-        placeholder="0.00"
-        className="block w-full h-12 border-0 rounded-[10px] py-1.5 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 font-semibold font-montserrat sm:text-sm sm:leading-6"
+        placeholder="0,00"
+        className="block w-full h-12 border-0 rounded-[10px] py-1.5 pr-20 text-gray-900 ring-1 ring-gray-300 placeholder:text-gray-400 font-semibold font-montserrat text-md outline-none"
       />
       <div className="absolute inset-y-0 right-0 flex items-center">
         <label htmlFor="currency" className="sr-only">
