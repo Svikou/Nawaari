@@ -1,10 +1,4 @@
-import { Console, log } from "console";
 import { useEffect, useState } from "react";
-
-interface label {
-  label: HTMLElement;
-  type: string;
-}
 
 const Accordion = () => {
   const [isOpen, setIsOpen] = useState(true);

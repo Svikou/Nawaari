@@ -65,7 +65,7 @@ const ConverterForm: React.FC = () => {
 
             <div className="form-group form-currency-group">
                 <div className="form-section">
-                    <label className="form-label">From</label>
+                    <label className="form-label"></label>
                     <CurrencySelect
                         selectedCurrency={fromCurrency}
                         handleCurrency={(e) => setFromCurrency(e.target.value)}
@@ -82,7 +82,7 @@ const ConverterForm: React.FC = () => {
                 </div>
 
                 <div className="form-section">
-                    <label className="form-label">To</label>
+                    <label className="form-label"></label>
                     <CurrencySelect
                         selectedCurrency={toCurrency}
                         handleCurrency={(e) => setToCurrency(e.target.value)}
