@@ -34,7 +34,7 @@ const Accordion = () => {
         </span>
       </div>
       {isOpen && (
-        <div className="mt-4 space-y-4">
+        <div className="mt-4 space-y-4 bg-[#e7e6e64d] p-4">
           {[{label:"loyer"},{label:"courses"},{label:"logiciel"}].map((item)=> <InputField getValue={getValue} label={item.label} /> )}
           <div className="flex justify-between text-sm font-medium mt-4">
             <span>Soit un Total de</span>

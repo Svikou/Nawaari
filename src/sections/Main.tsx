@@ -1,4 +1,4 @@
-import ConverterForm from "@/components/converterForm";
+import ConverterForm from "../components/ConverterForm";
 import Accordion from "../components/Accordion";
 import Input from "../components/Input";
 import Render from "../components/Render";
