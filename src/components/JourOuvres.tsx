@@ -23,6 +23,7 @@
 //   };
 
 // là maintenant on vise les 100 commit enfait
+// DINGRIIIIIII MY G
 
 //   return (
 //     <div className="p-4 bg-[#f5f7fa] rounded-lg">
