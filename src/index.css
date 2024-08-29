@@ -31,7 +31,7 @@ body {
   @apply text-black text-2xl font-semibold text-center;
 }
 
-.currency-converter  {
+.currency-converter {
   @apply text-black text-2xl font-semibold;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .converter-form .form-group .form-input {
-  @apply outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-md bg-white border border-gray-300 ;
+  @apply outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-lg bg-white border border-gray-300;
 }
 
 .converter-form .form-currency-group {
@@ -80,7 +80,7 @@ body {
 }
 
 .converter-form .submit-button {
-  @apply w-full min-h-[52px] rounded-md border-none outline-none text-base font-semibold cursor-pointer mt-1.5 transition ease-in-out bg-[#4DC5CE] text-white font-montserrat; 
+  @apply w-full min-h-[52px] rounded-md border-none outline-none text-base font-semibold cursor-pointer mt-1.5 transition ease-in-out bg-[#4DC5CE] text-white font-montserrat;
 }
 
 .converter-form .submit-button.loading {
