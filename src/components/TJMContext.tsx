@@ -7,7 +7,7 @@ type TJMValues = {
   logiciel: number;
   Input: number;
   InputField: number;
-  joursTravailles: 28;
+  joursTravailles: number;
 };
 
 // Définir le type pour le contexte

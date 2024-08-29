@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import { TJMContext, TJMProvider, TJMValues } from "./TJMContext";
+import React, { useContext, useState } from "react";
+import { TJMContext, TJMValues } from "./TJMContext";
 
 interface InputFieldProps {
   label: keyof TJMValues; // Spécifier que le label correspond à une clé de TJMValues
@@ -15,8 +15,7 @@ const InputField: React.FC<InputFieldProps> = ({ label }) => {
   const { values, setValues } = context;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValues({ ...values, [label]: event.target.value });
-    console.log(handleChange);
+    setValues({ ...values, [label]: parseFloat(event.target.value) || 0 });
   };
 
   return (
@@ -26,9 +25,9 @@ const InputField: React.FC<InputFieldProps> = ({ label }) => {
         <input
           value={values[label]}
           onChange={handleChange}
-          type="text"
+          type="number"
           className="w-[160px] pl-2 py-1 text-right bg-white border border-gray-300 rounded-md text-gray-900 font-semibold"
-          placeholder="Jour/Mois"
+          placeholder="0"
         />
       </div>
     </div>
@@ -43,48 +42,43 @@ const Accordion: React.FC = () => {
   };
 
   return (
-    <TJMProvider>
-      <div className="w-[450px] mx-auto h-12 rounded-lg bg-[#e7e6e64d] p-3 items-center">
-        <div
-          className="flex justify-between items-center cursor-pointer"
-          onClick={toggleAccordion}
+    <div className="w-[450px] mx-auto h-12 rounded-lg bg-[#e7e6e64d] p-3 items-center">
+      <div
+        className="flex justify-between items-center cursor-pointer"
+        onClick={toggleAccordion}
+      >
+        <h2 className="text-md font-semibold font-montserrat">
+          Frais de fonctionnement
+        </h2>
+        <span
+          className={`transform transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
         >
-          <h2 className="text-md font-semibold font-montserrat">
-            Frais de fonctionnement
-          </h2>
-          <span
-            className={`transform transition-transform ${
-              isOpen ? "rotate-180" : ""
-            }`}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="w-5 h-5"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-5 h-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </span>
-        </div>
-        {isOpen && (
-          <div className="mt-4 space-y-4">
-            {["loyer", "courses", "logiciel"].map((label) => (
-              <InputField
-                key={String(label)}
-                label={label as keyof TJMValues}
-              />
-            ))}
-          </div>
-        )}
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
       </div>
-    </TJMProvider>
+      {isOpen && (
+        <div className="mt-4 space-y-4">
+          {["loyer", "courses", "logiciel"].map((label) => (
+            <InputField key={String(label)} label={label as keyof TJMValues} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
