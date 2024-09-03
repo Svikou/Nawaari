@@ -11,18 +11,18 @@ const Input: React.FC = () => {
   const { values, setValues } = context;
 
   return (
-    <div className="w-[450px] mx-auto">
-      <label className="block text-md font-montserrat font-semibold leading-6 text-gray-900">
+    <div className="w-[450px] mx-auto ">
+      <label className="block text-lg font-montserrat font-semibold leading-6 text-gray-900">
         Salaire mensuel souhaité
       </label>
-      <div className="relative mt-2 rounded-md">
+      <div className="relative mt-2 rounded-md ">
         <input
           type="number"
           value={values.Input}
           onChange={(e) =>
             setValues({ ...values, Input: parseFloat(e.target.value) || 0 })
           }
-          className="outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-lg flex w-full bg-white border border-gray;"
+          className="outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-lg flex w-full bg-white border border-gray-300"
         />
       </div>
     </div>

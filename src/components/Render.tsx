@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { TJMContext } from "./TJMContext";
+import { TJMContext, TJMValues } from "./TJMContext";
 
 const CalculateurTJM: React.FC = () => {
   const context = useContext(TJMContext);
@@ -10,20 +10,31 @@ const CalculateurTJM: React.FC = () => {
 
   const { values } = context;
 
+  const getJoursOuvresCount = (
+    joursOuvres: TJMValues["joursOuvres"]
+  ): number => {
+    return Object.values(joursOuvres).filter(Boolean).length;
+  };
+
   const calculTJM = (): number => {
     const totalCharges =
       values.Input + values.loyer + values.courses + values.logiciel;
-    return totalCharges / values.joursTravailles;
+
+    const joursOuvresCount = getJoursOuvresCount(values.joursOuvres);
+
+    return totalCharges / joursOuvresCount;
   };
 
   return (
     <div className="mx-auto ">
-      <p className="block text-md font-montserrat font-semibold leading-6 text-gray-900 mb-2 text-center">
+      <p className="block text-lg font-montserrat font-semibold leading-6 text-gray-900 mb-2 text-center">
         Tarif journalier recommandé
       </p>
       <div className="w-[480px] h-[160px] mx-auto rounded-lg bg-[#e7e6e64d] p-3 items-center">
         <p className="mt-8 text-center font-montserrat text-[40px] font-semibold text-[#4DC5CE]">
-          {values.joursTravailles > 0 ? calculTJM().toFixed(2) : "0"} €
+          {getJoursOuvresCount(values.joursOuvres) > 0
+            ? calculTJM().toFixed(2)
+            : "0,00 / jour"}
         </p>
       </div>
     </div>

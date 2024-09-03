@@ -7,7 +7,17 @@ type TJMValues = {
   logiciel: number;
   Input: number;
   InputField: number;
-  joursTravailles: number;
+  joursOuvres: Days;
+};
+
+type Days = {
+  Lundi: number;
+  Mardi: number;
+  Mercredi: number;
+  Jeudi: number;
+  Vendredi: number;
+  Samedi: number;
+  Dimanche: number;
 };
 
 // Définir le type pour le contexte
@@ -28,9 +38,17 @@ const TJMProvider: React.FC<TJMProviderProps> = ({ children }) => {
     loyer: 0,
     courses: 0,
     logiciel: 0,
-    joursTravailles: 28,
     Input: 0,
     InputField: 0,
+    joursOuvres: {
+      Lundi: 0,
+      Mardi: 0,
+      Mercredi: 0,
+      Jeudi: 0,
+      Vendredi: 0,
+      Samedi: 0,
+      Dimanche: 0,
+    },
   });
 
   return (

@@ -3,7 +3,7 @@ import Accordion from "../components/Accordion";
 import Input from "../components/Input";
 import Render from "../components/Render";
 import { TJMProvider } from "@/components/TJMContext";
-// import TJMCalculator from "../components/TJMCalculator";
+import JoursOuvres from "@/components/JourOuvres";
 
 const Main = () => {
   return (
@@ -25,9 +25,15 @@ const Main = () => {
             <div className="p-5">
               <Accordion />
             </div>
+            <div className="pt-2">
+              <p className="block text-lg font-montserrat font-semibold leading-6 text-gray-900 mb-2 text-center">
+                Mes jours ouvrés
+              </p>
+              <JoursOuvres />
+            </div>
           </div>
           <div className="flex flex-1 flex-col">
-            <div className="pb-10">
+            <div className="pb-5">
               <Render />
             </div>
 

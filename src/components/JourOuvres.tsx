@@ -1,54 +1,50 @@
-// import React, { useContext } from "react";
-// import { TJMContext } from "./TJMContext";
+import React, { useContext } from "react";
+import { TJMContext } from "./TJMContext";
 
-// const JoursOuvres: React.FC = () => {
-//   const context = useContext(TJMContext);
+const JoursOuvres: React.FC = () => {
+  const context = useContext(TJMContext);
 
-//   if (!context) {
-//     throw new Error("JoursOuvres must be used within a TJMProvider");
-//   }
+  if (!context) {
+    throw new Error("JoursOuvres must be used within a TJMProvider");
+  }
 
-//   const { values, setValues } = context;
+  const { values, setValues } = context;
 
-//   // Gérer les changements pour chaque checkbox
-//   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//     const { name, checked } = event.target;
-//     setValues((prevValues) => ({
-//       ...prevValues,
-//       joursOuvres: {
-//         ...prevValues.joursOuvres,
-//         [name]: checked ? 1 : 0,
-//       },
-//     }));
-//   };
+  // Gérer les changements pour chaque checkbox
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, checked } = event.target;
+    setValues((prevValues) => ({
+      ...prevValues,
+      joursOuvres: {
+        ...prevValues.joursOuvres,
+        [name]: checked ? 1 : 0,
+      },
+    }));
+  };
 
-// là maintenant on vise les 100 commit enfait
-// DINGRIIIIIII MY G
-<p>Les 100 commit enfait.</p>;
+  return (
+    <div className="w-[450px] mx-auto px-10 p-10 rounded-lg bg-[#e7e6e64d] border border-[rgba(255,255,255,0.3)] mb-10">
+      <div className=" text-center flex flex-wrap justify-between gap-2 gap-y-8">
+        {Object.keys(values.joursOuvres).map((day) => (
+          <label
+            key={day}
+            className="flex items-center font-montserrat font-semibold"
+          >
+            <input
+              type="checkbox"
+              name={day}
+              checked={
+                values.joursOuvres[day as keyof typeof values.joursOuvres] === 1
+              }
+              onChange={handleChange}
+              className="form-checkbox  text-[#4DC5CE] rounded-lg "
+            />
+            <span className="ml-2">{day}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-//   return (
-//     <div className="p-4 bg-[#f5f7fa] rounded-lg">
-//       <h3 className="text-center text-md font-semibold text-gray-700 mb-4">
-//         MES JOURS OUVRÉS
-//       </h3>
-//       <div className="grid grid-cols-3 gap-4 text-center">
-//         {Object.keys(values.joursOuvres).map((day) => (
-//           <label key={day} className="flex items-center justify-center">
-//             <input
-//               type="checkbox"
-//               name={day}
-//               checked={
-//                 values.joursOuvres[day as keyof typeof values.joursOuvres] === 1
-//               }
-//               onChange={handleChange}
-//               className="form-checkbox text-purple-500"
-//             />
-//             <span className="ml-2">{day}</span>
-//           </label>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default JoursOuvres;
+export default JoursOuvres;
