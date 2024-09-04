@@ -18,12 +18,21 @@ const InputField: React.FC<{ label: keyof TJMValues }> = ({ label }) => {
     <div className="flex items-center justify-between bg-[#e7e6e6d3] rounded-lg p-4 mt-8 h-14">
       <label className="text-gray-700 font-medium">{label}</label>
       <div className="relative flex items-center">
+        <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+          <span className="text-gray-500  sm:text-lg">$</span>
+        </div>
         <input
-          value={values[label] || ""}
+          value={
+            typeof values[label] === "number"
+              ? values[label] !== 0
+                ? values[label]
+                : ""
+              : ""
+          }
           onChange={handleChange}
-          type="number"
-          className="w-[120px] pl-2 py-1 text-right bg-white border border-gray-300 rounded-md text-gray-900 font-semibold"
-          placeholder="0"
+          type="text"
+          className="w-[100px] pl-2 py-1 text-right bg-white border border-gray-300 rounded-md text-gray-900 font-semibold"
+          placeholder="0.00"
         />
       </div>
     </div>

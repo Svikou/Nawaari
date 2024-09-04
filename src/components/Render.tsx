@@ -33,7 +33,7 @@ const CalculateurTJM: React.FC = () => {
       <div className="w-[480px] h-[160px] mx-auto rounded-lg bg-[#e7e6e64d] p-3 items-center">
         <p className="mt-8 text-center font-montserrat text-[40px] font-semibold text-[#4DC5CE]">
           {getJoursOuvresCount(values.joursOuvres) > 0
-            ? calculTJM().toFixed(2)
+            ? `$${calculTJM().toFixed(2)} / jour`
             : "0,00 / jour"}
         </p>
       </div>

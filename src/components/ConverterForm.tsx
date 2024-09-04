@@ -32,8 +32,8 @@ const ConverterForm: React.FC = () => {
       const data = await response.json();
       const rate = (data.conversion_rate * amount).toFixed(2);
       setResult(`${amount} ${fromCurrency} = ${rate} ${toCurrency}`);
-    } catch (error) {
-      setResult("Something went wrong...!");
+      // } catch (error) {
+      // setResult("Something went wrong...!");
     } finally {
       setIsLoading(false);
     }
