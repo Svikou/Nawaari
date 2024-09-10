@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode } from "react";
 
-// Définir les types pour les valeurs du contexte
+// Définie les types pour les valeurs du contexte
 type TJMValues = {
   loyer: number;
   courses: number;
