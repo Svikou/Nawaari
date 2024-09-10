@@ -22,7 +22,7 @@ const CalculateurTJM: React.FC = () => {
 
     const joursOuvresCount = getJoursOuvresCount(values.joursOuvres);
 
-    return totalCharges / joursOuvresCount;
+    return totalCharges / joursOuvresCount / 4;
   };
 
   return (

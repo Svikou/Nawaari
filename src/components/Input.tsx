@@ -26,20 +26,8 @@ const Input: React.FC = () => {
             setValues({ ...values, Input: parseFloat(e.target.value) || 0 })
           }
           placeholder="0.00"
-          className="outline-none text-lg px-4 text-black font-medium min-h-[48px] rounded-lg flex w-full bg-white border border-gray-300 pl-7 pr-20"
+          className="outline-none text-right text-lg px-4 text-black font-medium min-h-[48px] rounded-lg flex w-full bg-white border border-gray-300 "
         />
-        <div className="absolute inset-y-0 right-0 flex items-center">
-          <label htmlFor="currency" className="sr-only">
-            Currency
-          </label>
-          <select
-            id="currency"
-            name="currency"
-            className="h-full rounded-md border-0 bg-transparent py-0 pl-2 pr-7 text-gray-500   sm:text-sm"
-          >
-            <option>USD</option>
-          </select>
-        </div>
       </div>
     </div>
   );
