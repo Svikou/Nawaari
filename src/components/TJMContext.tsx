@@ -20,7 +20,7 @@ type Days = {
   Dimanche: number;
 };
 
-// Définir le type pour le contexte
+// Définie le type pour le contexte
 type TJMContextType = {
   values: TJMValues;
   setValues: React.Dispatch<React.SetStateAction<TJMValues>>;
