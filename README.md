@@ -12,3 +12,16 @@ Customization options based on the freelancer's status (contract type, specific 
 ## Screenshot 📸
 
 <img src="public/Nawaari screen 1.png" alt="Screenshot de l'app" width="600"/>
+<img src="public/Nawaari screen 2.png" alt="Screenshot de l'app" width="600"/>
+
+## Technologies Used 🤖
+
+Frontend: React, Tailwind CSS
+
+## Skills Gained 🧠
+
+React: Using hooks (such as useState, useEffect) to manage the application's state and interactivity.
+Tailwind CSS: Creating a responsive and sleek user interface with Tailwind's utility classes.
+Dynamic Calculation: Implementing real-time calculations based on user input.
+Data Validation: Ensuring the accuracy of the input before performing calculations.
+
