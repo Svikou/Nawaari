@@ -179,7 +179,7 @@ const CurrencySelect: React.FC<CurrencySelectProps> = ({
 
   return (
     <div className="currency-select pl-3">
-      <img src={`https://flagsapi.com/${countryCode}/flat/64.png`} alt="Flag" />
+      <img src={`https://flagsapi.com/${countryCode}/flat/64.png`} width="4" height="4" alt="Flag" />
       <select
         onChange={handleCurrency}
         className="currency-dropdown"
